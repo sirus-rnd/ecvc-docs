@@ -6,7 +6,7 @@ Linimasa API menggunakan schema [graphql](https://graphql.org/) yang dapat diaks
 
 1. mintalah `access token` kepada kami. satu `access token` hanya dapat digunakan untuk 1 provider saja. Apabila ada penambahan provider, anda harus meminta access token baru.
 1. request API dilakukan dengan menggunakan format request sebagai berikut [serving over http](https://graphql.org/learn/serving-over-http/)
-1. tambahkan `access token` pada `Authorization` request header\
+1. tambahkan `access token` pada `Authorization` request header
 
 ## Contoh penggunaan
 
@@ -61,7 +61,7 @@ Host: ecvc.linimasa.app
 {
   "query": "query getFacility($id: String!){ facility { byID(id: $id) { name } } }",
   "operationName": "getFacility",
-  "variables": { id: "x-9191" }
+  "variables": { "id": "x-9191" }
 }
 ```
 
@@ -90,4 +90,5 @@ anda dapat mencoba query dengan menggunakan `query playground` yang tersedia di 
     ```
 
 1. ketik `ctrl+enter` atau anda dapat memencet tombol "play" ditengah playground
+1. dokumentasi schema terdapat di tab di sebelah kanan yang bertuliskan `docs`
 1. penggunaan lebih lajut dapat dibaca di [https://github.com/prisma-labs/graphql-playground](https://github.com/prisma-labs/graphql-playground)
